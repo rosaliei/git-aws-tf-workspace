@@ -1,5 +1,8 @@
-module "s3_test" {
-  source                          = "git::git@github.com:rosaliei/tf-aws-github.git"
-  backend_s3_bucket_name_kst      = "kst-s3"
-  backend_dynamodb_table_name_kst = "kst-dynamodb"
+module "vpc" {
+  source  = "terraform-aws-modules/vpc/aws"
+  version = "5.5.1"
+  cidr = var.vpc_cidr
+  azs = var.azs
+  public_subnets = var.public_subnet_cidrs
+  private_subnets = var.private_subnet_cidrs
 }
