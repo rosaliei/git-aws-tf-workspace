@@ -17,9 +17,9 @@ terraform {
 }
 
 provider "aws" {
-  shared_config_files      = ["$HOME/.aws/config"]
-  shared_credentials_files = ["$HOME/.aws/credentials"]
-  profile                  = "kst-dev"
+  #shared_config_files      = ["$HOME/.aws/config"]
+  #shared_credentials_files = ["$HOME/.aws/credentials"]
+  #profile                  = "kst-dev"
   #alias                   = "kst-dev"
   region                   = "ap-southeast-1"
 }
